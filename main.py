@@ -37,4 +37,12 @@ class PricePrediction:
         self.pred_ticker = pred_ticker 
         self.results_df = pd.DataFrame({'Ticker' : [], 'Pred_ret' : [], 'Predicted_Date' : [], 'Days_Later': [], 'Act_ret' : [],
             'Act_Adj_Close' : [], 'Pred_Adj_Close' : [], 'Pct_Err' : [], 'Bench_PAC' : [], 'Bench_Pct_Err' : []})
-        
+
+    #Function to make a folder on the computer to store data
+    def makeDirectory(self):
+        '''Create a folder on the local machine to use for storing data gathered from Yahoo'''
+        self.Yahoo_Folder = os.getcwd()+"\Yahoo_Downloads"
+
+        #If the folder doesnt exist, make it
+        if not os.path.exists(self.Yahoo_Folder):
+            os.makedirs(self.Yahoo_Folder)
