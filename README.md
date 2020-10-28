@@ -1,0 +1,2 @@
+# StockAnalysis
+This stock price predictor uses simple machine learning models to predict future adjusted closing prices. This script produces a GUI with which the user may interact. The predictor also displays historical stock price data, and other fundamental company data. The predictor pulls necessary data automatically from Yahoo! Finance through its API. This project is purely academic, and not intended for commercial purposes.
